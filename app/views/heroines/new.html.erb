@@ -11,8 +11,9 @@
 <% if @heroine.errors.any? %>
     <ul>
         <% @heroine.errors.full_messages.each do |msg| %>
+       
             <li>
-                <%=msg%> 
+                <%="#{msg}"%> 
             </li>
         <%end%>
     </ul>

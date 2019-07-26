@@ -6,7 +6,6 @@ class HeroinesController < ApplicationController
 
   def new
     @heroine = Heroine.new
-    # byebug
   end
 
   def show
@@ -16,10 +15,13 @@ class HeroinesController < ApplicationController
 
   def create
     @heroine = Heroine.new(hero_params)
+    # byebug
+
       if @heroine.valid?
           @heroine.save
           redirect_to heroine_path(@heroine)
       else
+
           redirect_to new_heroine_path
       end
   
