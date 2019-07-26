@@ -1,0 +1,7 @@
+<h1>Name:<%= @power.name %></h1>
+<h1>Description:<%= @power.description %></h1>
+
+
+<% @powers.each do |power| %>
+    <%= link_to power.name, powers_path(power)%> <br/>
+<% end %>
