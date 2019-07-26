@@ -1,6 +1,9 @@
 class HeroinesController < ApplicationController
+  @flag = 0
+
   def index
-    @heroines = Heroine.all
+      @heroines = Heroine.all
+    
   end
 
   def show
@@ -20,6 +23,16 @@ class HeroinesController < ApplicationController
     else
       redirect_to new_heroine_path
     end
+  end
+
+  def search
+
+    @p = Power.find_by name: params[:q]
+     @flag = @p
+
+    @heroines =  Heroine.where power_id: @flag
+
+      render  "index"
   end
 
   private
