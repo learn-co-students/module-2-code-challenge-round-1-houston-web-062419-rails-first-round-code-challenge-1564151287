@@ -11,7 +11,7 @@ powers = [
 powers.each {|power| Power.create(power)}
 
 heroines = [
-  {name: "Kamala Khan", super_name: "Ms. Marvel"},
+  {name: "Kamala Khan", super_name: "Ms. Marvel" },
   {name: "Doreen Green", super_name: "Squirrel Girl" },
   {name:"Gwen Stacy", super_name:"Spider-Gwen" },
   {name:"Janet Van Dyne", super_name:"The Wasp" },
@@ -22,6 +22,7 @@ heroines = [
   {name:"Kitty Pryde", super_name:"Shadowcat" },
   {name:"Elektra Natchios", super_name:"Elektra" }
 ]
+
 
 # ---------------
 # POWERFUL HEROINES:
