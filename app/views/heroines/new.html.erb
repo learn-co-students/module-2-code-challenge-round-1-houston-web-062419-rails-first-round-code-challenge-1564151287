@@ -1,0 +1,11 @@
+<%= form_for @hero do |f|%>
+<%= f.label :name%>:
+<%= f.text_field :name%>
+<%= f.label :super_name%>:
+<%= f.text_field :super_name%>
+<%= f.collection_select :power_id, @powers, :id, :name%>
+<%= f.submit%>
+<%end%>
+<h3><%= link_to "Go Back to All Heroines!", heroines_path%><h3>
+
+
