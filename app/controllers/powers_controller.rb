@@ -1,8 +1,9 @@
 class PowersController < ApplicationController
 
-  before_action :current_power, only: [:show, :edit, :update, :destroy]
+  before_action :current_power, only: [:show]
   def index
     @powers = Power.all
+    
   end
 
   def show

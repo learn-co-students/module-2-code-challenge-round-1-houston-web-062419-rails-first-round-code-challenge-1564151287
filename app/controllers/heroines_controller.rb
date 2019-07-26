@@ -1,8 +1,9 @@
 class HeroinesController < ApplicationController
   
-  before_action :current_heroine, only: [:show, :edit, :update, :destroy]
+  before_action :current_heroine, only: [:show]
   def index
     @heroines = Heroine.all
+  
   end
 
   def show
@@ -24,12 +25,6 @@ class HeroinesController < ApplicationController
     end
 
   end
-
-
-
-
-
-
 
   private
   def current_heroine
